@@ -6,13 +6,10 @@ import SliderFollowers from "./components/SliderFollowers";
 import SliderSubstraction from './components/SliderSubstraction';
 import { useSearchParams } from "react-router-dom";
 import Question from "./components/Quiestion";
+import ProfitList from './components/ProfitList';
 
 
 export default function Home() {
-    const [profitLarge, setProfitLarge] = useState(0);
-    const [profitMiddle, setProfitMiddle] = useState(0);
-    const [profitSmall, setProfitSmall] = useState(0);
-
     const [premiumSubstraction, setPremiumSubstraction] = useState(199);
     const [followers, setFollowers] = useState(500);
 
@@ -44,42 +41,6 @@ export default function Home() {
         }
 
     }, [paramValue])
-
-    useEffect(() => {
-        let step = 5000;
-        let timer1 = setTimeout(() => {
-            setInterval(
-                () =>
-                    setProfitLarge((prev) =>
-                        prev < 40000 ? prev + step : prev
-                    ),
-                800
-            );
-        }, 500);
-        let timer2 = setTimeout(() => {
-            setInterval(
-                () =>
-                    setProfitMiddle((prev) =>
-                        prev < 35000 ? prev + step : prev
-                    ),
-                900
-            );
-        }, 1000);
-        let timer3 = setTimeout(() => {
-            setInterval(
-                () =>
-                    setProfitSmall((prev) =>
-                        prev < 30000 ? prev + step : prev
-                    ),
-                1000
-            );
-        }, 1500);
-        return () => {
-            clearTimeout(timer1);
-            clearTimeout(timer2);
-            clearTimeout(timer3);
-        };
-    }, []);
 
     function handleSliderHover(e) {
         const slides = document.querySelectorAll('#advantagesSlider li');
@@ -138,23 +99,7 @@ export default function Home() {
                             className={styles.cup}
                         />
                         <div className={styles.human}>
-                            <ul className={styles.profit}>
-                                <li className={styles.profitLarge}>
-                                    {profitLarge === 0
-                                        ? ""
-                                        : `+ ${profitLarge}`}
-                                </li>
-                                <li className={styles.profitMiddle}>
-                                    {profitMiddle === 0
-                                        ? ""
-                                        : `+ ${profitMiddle}`}
-                                </li>
-                                <li className={styles.profitSmall}>
-                                    {profitSmall === 0
-                                        ? ""
-                                        : `+ ${profitSmall}`}
-                                </li>
-                            </ul>
+                            <ProfitList />
                         </div>
                         <img
                             src="../src/assets/lamp.svg"
@@ -456,8 +401,51 @@ export default function Home() {
                 </ul>
             </section>
             <section className={styles.startNow}>
-                    
+                <div className={styles.startNowContent}>
+                    <div className={styles.startNowTextBlock}>
+                        <h2>Начните зарабатывать уже сегодня!</h2>
+                        <h3>Превратите свою аудитория в источник стабильного дохода, создайте свой VPN-бот всего за 5 минут.</h3>
+                        <button>Попробовать</button>
+                    </div>
+                    <div className={styles.startNowImage}>
+                        <img 
+                            src="../src/assets/start-now-img.svg"
+                            alt="human"
+                        />
+                    </div>
+                </div>
             </section>
+            <footer className={styles.footer}>
+                <div className={styles.footerInfo}>
+                    <div>
+                        <h2>Сreator VPN</h2>
+                        <h3>Превратите свою аудиторию в источник стабильного дохода всего за 1 день.</h3>
+                        <button>Попробовать</button>
+                    </div>
+                    <div>© 2024 CreatorVpn. Все права защищены</div>
+                </div>
+                <div className={styles.footerContent}>
+                    <ul className={styles.footerContentLeft}>
+                        <li>О продукте</li>
+                        <li><a href="#">Создать VPN-бот</a></li>
+                        <li><a href="#">Новостной telegram-канал</a></li>
+                        <li><a href="#">Обратная связь</a></li>
+                        <li>Тарифы</li>
+                        <li><a href="#">Бесплатный</a></li>
+                        <li><a href="#">Премиум</a></li>
+                        <li><a href="#">Калькулятор прибыли</a></li>
+                    </ul>
+                    <ul className={styles.footerContentRight}>
+                        <li>Q&A</li>
+                        <li><a href='#'>Сколько времени займёт настройка VPN?</a></li>
+                        <li><a href='#'>Как я получу прибыль?</a></li>
+                        <li><a href='#'>Как быстро подписчики смогут подключиться к моему VPN?</a></li>
+                        <li><a href='#'>Что мои подписчики получат за эти деньги?</a></li>
+                        <li><a href='#'>Это законно?</a></li>
+                        <li><a href='#'>Как принимать платежи?</a></li>
+                    </ul>
+                </div>
+            </footer>
         </div>
     );
 }
