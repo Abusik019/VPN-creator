@@ -96,7 +96,7 @@
         bottom: 0;
 
         &>.human {
-            background-image: url('../src/assets/human.png');
+            background-image: url('../public/human.png');
             background-repeat: no-repeat;
             background-size: contain;
             background-position: bottom;
@@ -201,7 +201,7 @@
             justify-content: flex-start;
             gap: 20px;
 
-            background-image: url('../src/assets/schedule.svg');
+            background-image: url('../public/schedule.svg');
             background-repeat: no-repeat;
             background-position: bottom;
             background-size: contain;
@@ -256,7 +256,7 @@
                     padding-left: 36px;
                     box-sizing: border-box;
 
-                    background-image: url('../src/assets/check.svg');
+                    background-image: url('../public/check.svg');
                     background-size: 24px;
                     background-repeat: no-repeat;
                     background-position: left;
@@ -383,7 +383,7 @@
             height: 170px;
             width: 15px;
 
-            background-image: url('../src/assets/about-us-line.svg');
+            background-image: url('../public/about-us-line.svg');
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
@@ -673,7 +673,7 @@
                     padding-bottom: 16px;
                     box-sizing: border-box;
 
-                    background-image: url('../src/assets/blue-circle.svg');
+                    background-image: url('../public/blue-circle.svg');
                     background-position: left center;
                     background-repeat: no-repeat;
                     background-size: 24px;

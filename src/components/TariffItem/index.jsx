@@ -1,7 +1,5 @@
 import { useState } from "react";
 import styles from './style.module.scss';
-import openArrow from '../../assets/open-arrow.svg';
-import closeArrow from '../../assets/close-arrow.svg';
 
 export default function TariffItem({ title, description }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +11,7 @@ export default function TariffItem({ title, description }) {
     return (
         <li onClick={toggleDropdown} className={`${styles.tariffItem} ${isOpen ? styles.open : ""}`}>
             <img
-                src={isOpen ? openArrow : closeArrow}
+                src={isOpen ? "/VPN-creator/open-arrow.svg" : "/VPN-creator/close-arrow.svg"}
                 alt="arrow"
                 width={24}
                 height={24}

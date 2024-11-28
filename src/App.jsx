@@ -8,17 +8,6 @@ import { useSearchParams } from "react-router-dom";
 import Question from "./components/Quiestion";
 import ProfitList from './components/ProfitList';
 
-import cup from './assets/cup.svg';
-import lamp from './assets/lamp.svg';
-import sliderItem1 from './assets/slider-item1.svg';
-import sliderItem2 from './assets/slider-item2.svg';
-import sliderItem3 from './assets/slider-item3.svg';
-import sliderItem4 from './assets/slider-item4.svg';
-import aboutUs1 from './assets/about-us1.svg';
-import aboutUs2 from './assets/about-us2.svg';
-import aboutUs3 from './assets/about-us3.svg';
-import startNow from './assets/start-now-img.svg';
-
 
 export default function Home() {
     const [premiumSubstraction, setPremiumSubstraction] = useState(199);
@@ -103,7 +92,7 @@ export default function Home() {
                     </div>
                     <div className={styles.headerRight}>
                         <img
-                            src={cup}
+                            src="/VPN-creator/cup.svg"
                             alt="cup"
                             width={99}
                             height={225}
@@ -113,7 +102,7 @@ export default function Home() {
                             <ProfitList />
                         </div>
                         <img
-                            src={lamp}
+                            src="/VPN-creator/lamp.svg"
                             alt="lamp"
                             width={168}
                             height={234}
@@ -168,7 +157,7 @@ export default function Home() {
                         <ul className={styles.advantagesSlider} id="advantagesSlider">
                             <li id="slide-1" onMouseEnter={handleSliderHover}>
                                 <img
-                                    src={sliderItem1}
+                                    src="/VPN-creator/slider-item1.svg"
                                     alt="vpn"
                                     width={196}
                                     height={378}
@@ -176,7 +165,7 @@ export default function Home() {
                             </li>
                             <li id="slide-2" onMouseEnter={handleSliderHover}>
                                 <img
-                                    src={sliderItem2}
+                                    src="/VPN-creator/slider-item2.svg"
                                     alt="vpn"
                                     width={196}
                                     height={378}
@@ -184,7 +173,7 @@ export default function Home() {
                             </li>
                             <li id="slide-3" onMouseEnter={handleSliderHover}>
                                 <img
-                                    src={sliderItem3}
+                                    src="/VPN-creator/slider-item3.svg"
                                     alt="vpn"
                                     width={196}
                                     height={378}
@@ -192,7 +181,7 @@ export default function Home() {
                             </li>
                             <li id="slide-4" onMouseEnter={handleSliderHover}>
                                 <img
-                                    src={sliderItem4}
+                                    src="/VPN-creator/slider-item4.svg"
                                     alt="vpn"
                                     width={196}
                                     height={378}
@@ -206,7 +195,7 @@ export default function Home() {
                 <ul className={styles.aboutUsContent}>
                     <li className={styles.aboutUsItem}>
                         <img 
-                            src={aboutUs1}
+                            src="/VPN-creator/about-us1.svg"
                             alt="setting"
                             width={48}
                             height={48}
@@ -217,7 +206,7 @@ export default function Home() {
                     <li className={styles.aboutUsLine}></li>
                     <li className={styles.aboutUsItem}>
                         <img 
-                            src={aboutUs2}
+                            src="/VPN-creator/about-us2.svg"
                             alt="profit"
                             width={56}
                             height={48}
@@ -228,7 +217,7 @@ export default function Home() {
                     <li className={styles.aboutUsLine}></li>
                     <li className={styles.aboutUsItem}>
                         <img 
-                            src={aboutUs3}
+                            src="/VPN-creator/about-us3.svg"
                             alt="support"
                             width={56}
                             height={48}
@@ -420,7 +409,7 @@ export default function Home() {
                     </div>
                     <div className={styles.startNowImage}>
                         <img 
-                            src={startNow}
+                            src="/VPN-creator/start-now-img.svg"
                             alt="human"
                         />
                     </div>
