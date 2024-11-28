@@ -8,6 +8,17 @@ import { useSearchParams } from "react-router-dom";
 import Question from "./components/Quiestion";
 import ProfitList from './components/ProfitList';
 
+import cup from './assets/cup.svg';
+import lamp from './assets/lamp.svg';
+import sliderItem1 from './assets/slider-item1.svg';
+import sliderItem2 from './assets/slider-item2.svg';
+import sliderItem3 from './assets/slider-item3.svg';
+import sliderItem4 from './assets/slider-item4.svg';
+import aboutUs1 from './assets/about-us1.svg';
+import aboutUs2 from './assets/about-us2.svg';
+import aboutUs3 from './assets/about-us3.svg';
+import startNow from './assets/start-now-img.svg';
+
 
 export default function Home() {
     const [premiumSubstraction, setPremiumSubstraction] = useState(199);
@@ -92,7 +103,7 @@ export default function Home() {
                     </div>
                     <div className={styles.headerRight}>
                         <img
-                            src="../src/assets/cup.svg"
+                            src={cup}
                             alt="cup"
                             width={99}
                             height={225}
@@ -102,7 +113,7 @@ export default function Home() {
                             <ProfitList />
                         </div>
                         <img
-                            src="../src/assets/lamp.svg"
+                            src={lamp}
                             alt="lamp"
                             width={168}
                             height={234}
@@ -157,7 +168,7 @@ export default function Home() {
                         <ul className={styles.advantagesSlider} id="advantagesSlider">
                             <li id="slide-1" onMouseEnter={handleSliderHover}>
                                 <img
-                                    src="../src/assets/slider-item1.svg"
+                                    src={sliderItem1}
                                     alt="vpn"
                                     width={196}
                                     height={378}
@@ -165,7 +176,7 @@ export default function Home() {
                             </li>
                             <li id="slide-2" onMouseEnter={handleSliderHover}>
                                 <img
-                                    src="../src/assets/slider-item2.svg"
+                                    src={sliderItem2}
                                     alt="vpn"
                                     width={196}
                                     height={378}
@@ -173,7 +184,7 @@ export default function Home() {
                             </li>
                             <li id="slide-3" onMouseEnter={handleSliderHover}>
                                 <img
-                                    src="../src/assets/slider-item3.svg"
+                                    src={sliderItem3}
                                     alt="vpn"
                                     width={196}
                                     height={378}
@@ -181,7 +192,7 @@ export default function Home() {
                             </li>
                             <li id="slide-4" onMouseEnter={handleSliderHover}>
                                 <img
-                                    src="../src/assets/slider-item4.svg"
+                                    src={sliderItem4}
                                     alt="vpn"
                                     width={196}
                                     height={378}
@@ -195,7 +206,7 @@ export default function Home() {
                 <ul className={styles.aboutUsContent}>
                     <li className={styles.aboutUsItem}>
                         <img 
-                            src="../src/assets/about-us1.svg"
+                            src={aboutUs1}
                             alt="setting"
                             width={48}
                             height={48}
@@ -206,7 +217,7 @@ export default function Home() {
                     <li className={styles.aboutUsLine}></li>
                     <li className={styles.aboutUsItem}>
                         <img 
-                            src="../src/assets/about-us2.svg"
+                            src={aboutUs2}
                             alt="profit"
                             width={56}
                             height={48}
@@ -217,7 +228,7 @@ export default function Home() {
                     <li className={styles.aboutUsLine}></li>
                     <li className={styles.aboutUsItem}>
                         <img 
-                            src="../src/assets/about-us3.svg"
+                            src={aboutUs3}
                             alt="support"
                             width={56}
                             height={48}
@@ -409,7 +420,7 @@ export default function Home() {
                     </div>
                     <div className={styles.startNowImage}>
                         <img 
-                            src="../src/assets/start-now-img.svg"
+                            src={startNow}
                             alt="human"
                         />
                     </div>

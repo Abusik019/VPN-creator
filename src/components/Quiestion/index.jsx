@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import styles from './style.module.scss'
+import styles from './style.module.scss';
+import blueOpenArrow from '../../assets/blue-open-arrow.svg';
+import blueCloseArrow from '../../assets/blue-close-arrow.svg';
 
 export default function Question({ number, question, answer }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +16,7 @@ export default function Question({ number, question, answer }) {
                 <h2>{number}</h2>
                 <h3>{question}</h3>
                 <img 
-                    src={isOpen ? "../../../src/assets/blue-open-arrow.svg" : "../../../src/assets/blue-close-arrow.svg"}
+                    src={isOpen ? blueOpenArrow : blueCloseArrow}
                     alt="arrow"
                     width={44}
                     height={44}
