@@ -7,6 +7,7 @@ import SliderSubstraction from './components/SliderSubstraction';
 import { useSearchParams } from "react-router-dom";
 import Question from "./components/Quiestion";
 import ProfitList from './components/ProfitList';
+import SliderSubstractionFree from "./components/SliderSubstractionFree";
 
 
 export default function Home() {
@@ -345,8 +346,9 @@ export default function Home() {
                                 </div>
                                 <div id="substriction" className={styles.substriction}>
                                     <h2>Стоимость подписки</h2>
-                                    <SliderSubstraction disabled={false} setPremiumSubstraction={setPremiumSubstraction}/>
+                                    <SliderSubstraction setPremiumSubstraction={setPremiumSubstraction}/>
                                 </div>
+                                {premiumSubstraction > 199 && <h2>*10% от наценки уйдёт на комиссии платежей, если стоимость подписки свыше 199 ₽</h2>}
                                 <button className={styles.price}>{premiumCost} ₽ / мес.</button>
                             </div> 
                         : 
@@ -357,8 +359,9 @@ export default function Home() {
                                 </div>
                                 <div id="substriction" className={styles.substriction}>
                                     <h2>Стоимость подписки</h2>
-                                    <SliderSubstraction disabled={true}/>
+                                    <SliderSubstractionFree />
                                 </div>
+                                <h2>*Изменение стоимости доступно в тарифе премиум.</h2>
                                 <button className={styles.price}>{freeCost} ₽ / мес.</button>
                             </div>
                         }

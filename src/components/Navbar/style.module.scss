@@ -31,6 +31,14 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+
+            color: #000;
+
+            transition: color .3s ease-in-out;
+
+            &:hover{
+                color: #8FC0FF;
+            }
         }
     }
 

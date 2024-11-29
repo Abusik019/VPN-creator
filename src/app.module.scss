@@ -812,6 +812,19 @@
 
                 width: 100%;
 
+                &>h2{
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px;
+
+                    margin-top: -10px;
+
+                    text-align: left;
+
+                    width: 100%;
+                }
+
                 &>.followers, .substriction{
                     width: 100%;
                     height: 148px;

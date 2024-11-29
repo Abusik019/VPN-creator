@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Slider } from "antd";
 
-const SliderSubstraction = ({ setPremiumSubstraction=199, disabled }) => {
-    const [value, setValue] = useState();
+const SliderSubstraction = ({ setPremiumSubstraction=199 }) => {
+    const [value, setValue] = useState(199);
 
     const handleChange = (val) => {
         setValue(val); 
@@ -13,7 +13,6 @@ const SliderSubstraction = ({ setPremiumSubstraction=199, disabled }) => {
         <>
             <Slider 
                 defaultValue={199} 
-                disabled={disabled} 
                 value={value}
                 onChange={handleChange}
                 min={149}
