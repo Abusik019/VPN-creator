@@ -92,13 +92,20 @@ export default function Home() {
                         </div>
                     </div>
                     <div className={styles.headerRight}>
-                        <img
-                            src="/VPN-creator/cup.svg"
-                            alt="cup"
-                            width={99}
-                            height={225}
-                            className={styles.cup}
-                        />
+                        <div className={styles.cup}>
+                            <img
+                                src="/VPN-creator/steam.svg"
+                                alt="steam"
+                                width={86}
+                                height={138}
+                            />
+                            <img 
+                                src="/VPN-creator/cup.jpg"
+                                alt="cup"
+                                width={78}
+                                height={75}
+                            />
+                        </div>
                         <div className={styles.human}>
                             <ProfitList />
                         </div>
@@ -261,9 +268,9 @@ export default function Home() {
                                 description="При 1000+ ежемесячных продажах, стоимость для вас 100 ₽, стоимость в вашем боте регулируется вами в диапазоне от 150 до 400 ₽, связано это с бесплатным переходом на Premium тариф. Ваша прибыль с продажи каждой подписки — от 50 до 260 ₽."
                             />
                         </ul>
-
                         <p>* Продажа — это любая оплата, которая прошла в вашем боте.<br/>Стоимость VPN в Вашем боте — 199 ₽.<br/>Разница между стоимостью в боте и начальной стоимостью — ваша прибыль</p>
                     </li>
+                    <li className={styles.tariffsContentTry}><button>Попробовать</button></li>
                     <li>
                         <div className={styles.premiumTextBlock}>
                             <h2>Премиум</h2>
@@ -325,6 +332,17 @@ export default function Home() {
                             </li>
                         </ul>
                     </li>
+                    <div className={styles.tariffPriceBlock}>
+                            <div>
+                                <h3>2990</h3>
+                                <div className={styles.tariffPriceText}>
+                                    <h4>руб.</h4>
+                                    <div></div>
+                                    <h5>мес.</h5>
+                                </div>
+                            </div>
+                            <button>Приобрести</button>
+                    </div>
                 </ul>
             </section>
             <section className={styles.calculator}>

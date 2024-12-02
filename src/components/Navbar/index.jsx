@@ -10,7 +10,15 @@ export default function Navbar() {
             <li>Калькулятор прибыли</li>
             <li>Q&A</li>
         </ul>
-        <button>Попробовать</button>
+        <button className={styles.headerTryBtn}>Попробовать</button>
+        <button className={styles.burgerMenu}>
+          <img 
+              src="/VPN-creator/burger-menu.svg"
+              alt="burger menu"
+              width={42}
+              height={42}
+          />
+        </button>
     </div>
   )
 }

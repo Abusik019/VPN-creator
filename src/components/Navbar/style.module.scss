@@ -42,7 +42,7 @@
         }
     }
 
-    &>button{
+    &>.headerTryBtn{
         width: 113px;
         height: 20px;
 
@@ -60,4 +60,34 @@
         font-weight: 500;
         line-height: normal;
     }
+
+    &>.burgerMenu{
+        display: none;
+        cursor: pointer;
+
+        width: 42px;
+        height: 42px;
+
+        background-color: transparent;
+        border: none;
+        pointer-events: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        padding: 0;
+
+        &>.navLinks{
+            display: none;
+        }
+
+        &>.headerTryBtn{
+            display: none;
+        }
+
+        &>.burgerMenu{
+            display: block;
+        }
+    } 
 }

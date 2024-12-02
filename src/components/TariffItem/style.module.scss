@@ -37,8 +37,19 @@
     
     &.open {
         &>.dropdownText p {
-            max-height: 200px; 
+            max-height: 700px; 
             opacity: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tariffItem{    
+        &>.dropdownText{
+            &>h4{
+                font-size: 16px;
+                line-height: normal;
+            }
         }
     }
 }
