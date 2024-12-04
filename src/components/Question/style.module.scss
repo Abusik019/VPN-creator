@@ -75,3 +75,45 @@
         right: 0px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .question{
+        padding: 20px 16px;
+    
+        &>.visibleContent{
+            gap: 12px;
+    
+            &>h2{
+                font-size: 24px;
+            }
+    
+            &>h3{
+                font-size: 16px;
+                font-weight: 400;
+                line-height: normal;  
+    
+                width: 70%;
+            }
+    
+            &>.questionArrow{
+                width: 32px;
+                height: 32px;
+            }
+        }
+    
+        &>p{
+            margin-left: 39px;
+
+            font-size: 16px;
+            line-height: normal;
+        }
+    
+        &.open {
+            &>p {
+                max-height: 700px; 
+                opacity: 1;
+                margin-top: 12px;
+            }
+        }
+    }
+}
