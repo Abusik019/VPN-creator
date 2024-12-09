@@ -8,6 +8,7 @@ import { useSearchParams } from "react-router-dom";
 import Question from "./components/Question";
 import ProfitList from "./components/ProfitList";
 import SliderSubstractionFree from "./components/SliderSubstractionFree";
+import AnimationCup from "./components/AnimationCup";
 
 export default function Home() {
     const [premiumSubstraction, setPremiumSubstraction] = useState(199);
@@ -96,20 +97,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className={styles.headerRight}>
-                        <div className={styles.cup}>
-                            <img
-                                src="/VPN-creator/steam.svg"
-                                alt="steam"
-                                width={86}
-                                height={138}
-                            />
-                            <img
-                                src="/VPN-creator/cup.jpg"
-                                alt="cup"
-                                width={78}
-                                height={75}
-                            />
-                        </div>
+                        <AnimationCup />
                         <div className={styles.human}>
                             <ProfitList />
                         </div>
@@ -206,7 +194,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className={styles.aboutUs}>
+            <section className={styles.aboutUs} id="aboutUs">
                 <ul className={styles.aboutUsContent}>
                     <li className={styles.aboutUsItem}>
                         <img
@@ -242,9 +230,9 @@ export default function Home() {
                     </li>
                 </ul>
             </section>
-            <section className={styles.tariffs}>
+            <section className={styles.tariffs} id="tariffs">
                 <h2>Тарифы</h2>
-                {/* <div className={styles.tariffBackground}></div> */}
+                <div className={styles.tariffBackground}></div>
                 <ul className={styles.tariffsContent}>
                     <li>
                         <h2>Бесплатный</h2>
@@ -292,7 +280,7 @@ export default function Home() {
                     <li className={styles.tariffsContentTry}>
                         <button>Попробовать</button>
                     </li>
-                    <li>
+                    <li id="tariff-premium">
                         <div className={styles.premiumTextBlock}>
                             <h2>Премиум</h2>
                             <p>
@@ -393,7 +381,7 @@ export default function Home() {
                     </div>
                 </ul>
             </section>
-            <section className={styles.calculator}>
+            <section className={styles.calculator} id="calculator">
                 <div className={styles.calculatorContainer}>
                     <div className={styles.calculatorTextBlock}>
                         <h2>Калькулятор прибыли</h2>
@@ -475,7 +463,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className={styles.questions}>
+            <section className={styles.questions} id="questions">
                 <h2>Ответы на часто задаваемые вопросы</h2>
                 <ul className={styles.questionsContent}>
                     <Question
@@ -551,10 +539,10 @@ export default function Home() {
                         </li>
                         <li>Тарифы</li>
                         <li>
-                            <a href="#">Бесплатный</a>
+                            <a href="#tariffs">Бесплатный</a>
                         </li>
                         <li>
-                            <a href="#">Премиум</a>
+                            <a href="#tariff-premium">Премиум</a>
                         </li>
                         <li>
                             <a href="#">Калькулятор прибыли</a>

@@ -73,7 +73,7 @@
         background-color: transparent;
         border: none;
 
-        z-index: 10000;
+        z-index: 1;
 
         &:hover {
             background-color: transparent !important;
@@ -123,7 +123,27 @@
             }
         }
 
-        &>button {
+        &>.closeMenu{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+            cursor: pointer;
+    
+            width: 42px;
+            height: 42px;
+    
+            background-color: transparent;
+            border: none;
+    
+            z-index: 10000;
+    
+            &:hover {
+                background-color: transparent !important;
+            }
+        }
+
+        &>.tryBtn{
             width: 147px;
             height: 45px;
 
@@ -132,12 +152,12 @@
 
             background-color: transparent;
 
-            margin-top: 40px;
-
             font-size: 14px;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
+
+            margin-top: 40px;
         }
     }
 
@@ -148,7 +168,19 @@
 
 @media screen and (max-width: 768px) {
     .navbar {
-        padding: 0;
+        padding: 20px 16px;
+        box-sizing: border-box;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+    
+        width: 100vw;
+        height: 64px;
+
+        background-color: #fff;
+
+        z-index: 100000;
 
         &>.navLinks,
         &>.headerTryBtn {

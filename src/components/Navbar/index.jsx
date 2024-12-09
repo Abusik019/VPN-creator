@@ -8,22 +8,18 @@ export default function Navbar() {
         <div className={styles.navbar}>
             <h1>Creator VPN</h1>
             <ul className={styles.navLinks}>
-                <li>О продукте</li>
-                <li>Тарифы</li>
-                <li>Калькулятор прибыли</li>
-                <li>Q&A</li>
+                <li><a href="#aboutUs">О продукте</a></li>
+                <li><a href="#tariffs">Тарифы</a></li>
+                <li><a href="#calculator">Калькулятор прибыли</a></li>
+                <li><a href="#questions">Q&A</a></li>
             </ul>
             <button className={styles.headerTryBtn}>Попробовать</button>
             <button
                 className={styles.burgerMenu}
-                onClick={() => setIsOpen((state) => !state)}
+                onClick={() => setIsOpen(true)}
             >
                 <img
-                    src={
-                        isOpen
-                            ? "/VPN-creator/krestik.svg"
-                            : "/VPN-creator/burger-menu.svg"
-                    }
+                    src="/VPN-creator/burger-menu.svg"
                     alt="burger menu"
                     width={42}
                     height={42}
@@ -34,13 +30,24 @@ export default function Navbar() {
                     isOpen ? styles.sideNavOpen : ""
                 }`}
             >
+                <button
+                    className={styles.closeMenu}
+                    onClick={() => setIsOpen(false)}
+                >
+                    <img
+                        src="/VPN-creator/krestik.svg"
+                        alt="close menu"
+                        width={42}
+                        height={42}
+                    />
+                </button>
                 <ul>
-                    <li>О продукте</li>
-                    <li>Тарифы</li>
-                    <li>Калькулятор прибыли</li>
-                    <li>Q&A</li>
+                    <li><a href="#aboutUs" onClick={() => setIsOpen(false)}>О продукте</a></li>
+                    <li><a href="#tariffs" onClick={() => setIsOpen(false)}>Тарифы</a></li>
+                    <li><a href="#calculator" onClick={() => setIsOpen(false)}>Калькулятор прибыли</a></li>
+                    <li><a href="#questions" onClick={() => setIsOpen(false)}>Q&A</a></li>
                 </ul>
-                <button>Попробовать</button>
+                <button className={styles.tryBtn}>Попробовать</button>
             </div>
         </div>
     );
