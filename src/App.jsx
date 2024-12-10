@@ -16,7 +16,7 @@ export default function Home() {
 
     // Вычисление стоимости премиум тарифа
     const premiumCost =
-        premiumSubstraction >= 199
+        premiumSubstraction <= 199
             ? Math.round(followers * (premiumSubstraction - 100))
             : Math.round(
                   followers *
