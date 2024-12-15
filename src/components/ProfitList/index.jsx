@@ -18,14 +18,16 @@ const ProfitList = () => {
             } else {
                 clearInterval(interval);
             }
-        }, 500); 
+        }, 1000);
         return () => clearInterval(interval);
     }, []);
 
     return (
         <ul className={styles.profit}>
             {values.map((val, index) => (
-                <li key={index}>+ {val}</li>
+                <li key={val} className={styles.fadeIn}>
+                    + {val}
+                </li>
             ))}
         </ul>
     );

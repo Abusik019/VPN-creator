@@ -1,10 +1,10 @@
 import styles from "./app.module.scss";
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import TariffItem from "./components/TariffItem";
 import SliderFollowers from "./components/SliderFollowers";
 import SliderSubstraction from "./components/SliderSubstraction";
-import { useSearchParams } from "react-router-dom";
 import Question from "./components/Question";
 import ProfitList from "./components/ProfitList";
 import SliderSubstractionFree from "./components/SliderSubstractionFree";
@@ -529,13 +529,13 @@ export default function Home() {
                     <ul className={styles.footerContentLeft}>
                         <li>О продукте</li>
                         <li>
-                            <a href="#">Создать VPN-бот</a>
+                            <a href="https://t.me/CreatorVPN_Bot" target="_blank">Создать VPN-бот</a>
                         </li>
                         <li>
-                            <a href="#">Новостной telegram-канал</a>
+                            <a href="https://t.me/CreatorVPN" target="_blank">Новостной telegram-канал</a>
                         </li>
                         <li>
-                            <a href="#">Обратная связь</a>
+                            <a href="https://t.me/CreatorVPN_Support" target="_blank">Обратная связь</a>
                         </li>
                         <li>Тарифы</li>
                         <li>
@@ -545,35 +545,35 @@ export default function Home() {
                             <a href="#tariff-premium">Премиум</a>
                         </li>
                         <li>
-                            <a href="#">Калькулятор прибыли</a>
+                            <a href="#calculator">Калькулятор прибыли</a>
                         </li>
                     </ul>
                     <ul className={styles.footerContentRight}>
                         <li>Q&A</li>
                         <li>
-                            <a href="#">
+                            <a href="#questions">
                                 Сколько времени займёт настройка VPN?
                             </a>
                         </li>
                         <li>
-                            <a href="#">Как я получу прибыль?</a>
+                            <a href="#questions">Как я получу прибыль?</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#questions">
                                 Как быстро подписчики смогут подключиться
                                 к моему VPN?
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#questions">
                                 Что мои подписчики получат за эти деньги?
                             </a>
                         </li>
                         <li>
-                            <a href="#">Это законно?</a>
+                            <a href="#questions">Это законно?</a>
                         </li>
                         <li>
-                            <a href="#">Как принимать платежи?</a>
+                            <a href="#questions">Как принимать платежи?</a>
                         </li>
                     </ul>
                 </div>

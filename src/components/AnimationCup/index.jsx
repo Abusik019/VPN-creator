@@ -37,8 +37,14 @@ export default function AnimationCup() {
                 ref={imgRef}
                 width={86}
                 height={138}
+                className={styles.steam}
             />
-            <img src="/VPN-creator/cup.jpg" alt="cup" width={78} height={75} />
+            <img 
+                src="/VPN-creator/cup.jpg" 
+                alt="cup" width={78} 
+                height={75} 
+                className={styles.cupItem}
+            />
         </div>
     );
 }
