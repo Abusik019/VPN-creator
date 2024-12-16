@@ -6,14 +6,14 @@ export default function Navbar() {
 
     return (
         <div className={styles.navbar}>
-            <h1>Creator VPN</h1>
+            <a href="/" className={styles.title}>Creator VPN</a>
             <ul className={styles.navLinks}>
-                <li><a href="#aboutUs">О продукте</a></li>
+                <li><a href="#advantages">О продукте</a></li>
                 <li><a href="#tariffs">Тарифы</a></li>
                 <li><a href="#calculator">Калькулятор прибыли</a></li>
                 <li><a href="#questions">Q&A</a></li>
             </ul>
-            <button className={styles.headerTryBtn}>Попробовать</button>
+            <button className={styles.headerTryBtn}><a href="https://t.me/CreatorVPN_Bot" target="_blank">Попробовать</a></button>
             <button
                 className={styles.burgerMenu}
                 onClick={() => setIsOpen(true)}
@@ -42,12 +42,12 @@ export default function Navbar() {
                     />
                 </button>
                 <ul>
-                    <li><a href="#aboutUs" onClick={() => setIsOpen(false)}>О продукте</a></li>
+                    <li><a href="#advantages" onClick={() => setIsOpen(false)}>О продукте</a></li>
                     <li><a href="#tariffs" onClick={() => setIsOpen(false)}>Тарифы</a></li>
                     <li><a href="#calculator" onClick={() => setIsOpen(false)}>Калькулятор прибыли</a></li>
                     <li><a href="#questions" onClick={() => setIsOpen(false)}>Q&A</a></li>
                 </ul>
-                <button className={styles.tryBtn}>Попробовать</button>
+                <button className={styles.tryBtn}><a href="https://t.me/CreatorVPN_Bot" target="_blank">Попробовать</a></button>
             </div>
         </div>
     );

@@ -48,6 +48,22 @@ export default function Home() {
         }
     }, [paramValue]);
 
+    useEffect(() => {
+        // Отключаем восстановление позиции прокрутки
+        if ("scrollRestoration" in window.history) {
+            window.history.scrollRestoration = "manual";
+        }
+
+        // Убираем query параметры и якорные ссылки из URL
+        if (window.location.search || window.location.hash) {
+            const baseUrl = window.location.origin + window.location.pathname;
+            window.history.replaceState(null, "", baseUrl);
+        }
+
+        // Прокрутка страницы вверх
+        window.scrollTo(0, 0);
+    }, []); // Выполняется один раз при загрузке компонента
+
     function handleSliderHover(e) {
         const slides = document.querySelectorAll("#advantagesSlider li");
 
@@ -89,10 +105,10 @@ export default function Home() {
                         </p>
                         <div className={styles.btnContainer}>
                             <button className={styles.btnTry}>
-                                Попробовать
+                                <a href="https://t.me/CreatorVPN_Bot" target="_blank">Попробовать</a>
                             </button>
                             <button className={styles.btnCalculte}>
-                                Рассчитать прибыль
+                                <a href="#calculator">Рассчитать прибыль</a>
                             </button>
                         </div>
                     </div>
@@ -111,7 +127,7 @@ export default function Home() {
                     </div>
                 </div>
             </header>
-            <section className={styles.advantages}>
+            <section className={styles.advantages} id="advantages">
                 <h2>
                     Преимущества создания своего
                     <span>
@@ -152,7 +168,7 @@ export default function Home() {
                                 думали только о распространении своего VPN-бота,
                                 а обо всем остальном позаботимся мы!
                             </h3>
-                            <button>Попробовать</button>
+                            <button><a href="https://t.me/CreatorVPN_Bot" target="_blank">Попробовать</a></button>
                         </div>
                         <ul
                             className={styles.advantagesSlider}
@@ -194,7 +210,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className={styles.aboutUs} id="aboutUs">
+            <section className={styles.aboutUs}>
                 <ul className={styles.aboutUsContent}>
                     <li className={styles.aboutUsItem}>
                         <img
@@ -237,7 +253,7 @@ export default function Home() {
                     <li>
                         <h2>Бесплатный</h2>
                         <h3>Для тех, кто хочет просто попробовать.</h3>
-                        <button>Попробовать</button>
+                        <button><a href="https://t.me/CreatorVPN_Bot" target="_blank">Попробовать</a></button>
                     </li>
                     <li>
                         <h2>Чем больше продаж, тем больше заработок.</h2>
@@ -278,7 +294,7 @@ export default function Home() {
                         </p>
                     </li>
                     <li className={styles.tariffsContentTry}>
-                        <button>Попробовать</button>
+                        <button><a href="https://t.me/CreatorVPN_Bot" target="_blank">Попробовать</a></button>
                     </li>
                     <li id="tariff-premium">
                         <div className={styles.premiumTextBlock}>
@@ -297,7 +313,7 @@ export default function Home() {
                                     <h5>мес.</h5>
                                 </div>
                             </div>
-                            <button>Приобрести</button>
+                            <button><a href="https://t.me/CreatorVPN_Bot" target="_blank">Приобрести</a></button>
                         </div>
                     </li>
                     <li>
@@ -433,7 +449,7 @@ export default function Home() {
                                     </h2>
                                 )}
                                 <button className={styles.price}>
-                                    {premiumCost} ₽ / мес.
+                                    <a href="https://t.me/CreatorVPN_Bot" target="_blank">{premiumCost} ₽ / мес.</a>
                                 </button>
                             </div>
                         ) : (
@@ -456,7 +472,7 @@ export default function Home() {
                                     премиум.
                                 </h2>
                                 <button className={styles.price}>
-                                    {freeCost} ₽ / мес.
+                                    <a href="https://t.me/CreatorVPN_Bot" target="_blank">{freeCost} ₽ / мес.</a>
                                 </button>
                             </div>
                         )}
@@ -506,7 +522,7 @@ export default function Home() {
                             Превратите свою аудитория в источник стабильного
                             дохода, создайте свой VPN-бот всего за 5 минут.
                         </h3>
-                        <button>Попробовать</button>
+                        <button><a href="https://t.me/CreatorVPN_Bot" target="_blank">Попробовать</a></button>
                     </div>
                     <div className={styles.startNowImage}>
                         <img src="/VPN-creator/start-now-img.svg" alt="human" />
@@ -521,7 +537,7 @@ export default function Home() {
                             Превратите свою аудиторию в источник стабильного
                             дохода всего за 1 день.
                         </h3>
-                        <button>Попробовать</button>
+                        <button><a href="https://t.me/CreatorVPN_Bot" target="_blank">Попробовать</a></button>
                     </div>
                     <div>© 2024 CreatorVpn. Все права защищены</div>
                 </div>

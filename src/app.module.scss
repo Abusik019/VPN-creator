@@ -61,11 +61,14 @@
 
             &>.btnTry {
                 background-color: #8FC0FF;
-                color: #fff;
 
                 width: 141px;
 
                 border: 1px solid #8FC0FF;
+
+                &>a{
+                    color: #fff;
+                }
 
                 &:hover{
                     border: 1px solid #0D0A2C;
@@ -118,6 +121,7 @@
     height: fit-content;
 
     padding: 0 120px;
+    padding-top: 80px;
     box-sizing: border-box;
 
     margin-top: 102px;
